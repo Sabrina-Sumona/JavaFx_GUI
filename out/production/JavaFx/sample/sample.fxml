@@ -1,6 +1,6 @@
 <?import javafx.geometry.Insets?>
-<!--<?import javafx.scene.layout.GridPane?>-->
-<!--<?import javafx.scene.layout.HBox?>-->
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
@@ -11,8 +11,76 @@
 <!-- default alignment is top-left -->
 <!-- we can add css style as normal css properties but by add a prefix -fx- -->
 
-<!-- VBox (vertical box) Layout -->
+<!-- Hybrid (GridPane + HBox +VBox) Layout -->
+<?import javafx.scene.layout.HBox?>
 <VBox
+        fx:controller = "sample.Controller"
+        xmlns:fx = "http://javafx.com/fxml"
+        alignment = "TOP_CENTER"
+        spacing = "15"
+        style = "-fx-border-color: green; -fx-border-width: 5"
+>
+
+    <padding>
+        <Insets right="20" bottom="20"/>
+    </padding>
+
+    <Label text="Welcome to Java FX!!" textFill="green">
+        <font>
+            <Font name = "Times New Roman bold" size="50"/>
+        </font>
+    </Label>
+
+    <GridPane
+            alignment="center"
+            hgap="10"
+            vgap="10"
+            gridLinesVisible="false"
+    >
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20.0"/>
+            <ColumnConstraints percentWidth="20.0"/>
+            <ColumnConstraints percentWidth="20.0"/>
+            <ColumnConstraints percentWidth="20.0"/>
+            <ColumnConstraints percentWidth="20.0"/>
+        </columnConstraints>
+
+        <padding>
+            <Insets left="20" right="20"/>
+        </padding>
+
+        <Button text="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Button text="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Button text="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <Button text="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+        <Button text="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+        <Button text="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Button text="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Button text="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <Button text="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+        <Button text="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="4"/>
+
+    </GridPane>
+
+    <Label text="Do you want to continue?" textFill="royalblue">
+        <font>
+            <Font name = "Times New Roman bold" size="30"/>
+        </font>
+    </Label>
+
+    <HBox
+            alignment = "BOTTOM_CENTER"
+            spacing = "25"
+            prefHeight="100"
+    >
+        <Button text="Done" prefWidth="100"/>
+        <Button text="Exit" prefWidth="100"/>
+        <Button text="Help" prefWidth="100"/>
+    </HBox>
+</VBox>
+
+<!-- VBox (vertical box) Layout -->
+<!-- <VBox
         fx:controller = "sample.Controller"
         xmlns:fx = "http://javafx.com/fxml"
         alignment = "TOP_CENTER"
@@ -39,7 +107,7 @@
     <Button text="Done" prefWidth="100"/>
     <Button text="Exit" prefWidth="100"/>
     <Button text="Help" prefWidth="100"/>
-</VBox>
+</VBox>  -->
 
 <!-- HBox (horizontal box) Layout -->
 <!--<HBox
