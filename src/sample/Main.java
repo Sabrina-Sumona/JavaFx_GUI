@@ -12,9 +12,10 @@ public class Main extends Application {
     // start method is mandatory, but others 2 are optional
     @Override
     public void start(Stage primaryStage) throws Exception{
+        // we can also the gridpane & label code here without using the sample.fxml file
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 500, 375));
+        primaryStage.setScene(new Scene(root, 700, 375));
         primaryStage.show();
     }
 
