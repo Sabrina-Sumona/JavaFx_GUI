@@ -15,7 +15,7 @@ public class Main extends Application {
         // we can also the gridpane & label code here without using the sample.fxml file
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 520, 370));
+        primaryStage.setScene(new Scene(root, 720, 570));
         primaryStage.show();
     }
 
